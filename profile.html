@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags yang diperlukan -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
+    <!-- Google Fonts - Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- OnlineWebFonts - TwentiethCenturyW01 -->
+    <link
+      href="//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/stylesheet/app.css" />
+    <link rel="stylesheet" href="assets/stylesheet/responsive.css" />
+
+    <!-- Google Fonts - Vampiro One -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS CSS from different sources -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css"
+    />
+
+    <title>Ruur Profile</title>
+  </head>
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap");
+
+    body {
+      background: linear-gradient(#069de8 0%, #59d0f1 40%, #90bdea 100%);
+      font-family: "Poppins", sans-serif;
+    }
+    
+    .bg-light {
+      background: #5fb3ef !important;
+      /* backdrop-filter: blur(3px);
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.589); */
+      transition: all 0.5s;
+    }
+    .bg-light.scrolled {
+      background: #ffffff !important;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.589);
+      transition: all 0.5s;
+    }
+    .nav a {
+      color: white;
+    }
+.buttonToggle {
+  display: none;
+}
+.initial {
+  font-family: "Vampiro One", cursive;
+  font-size: 30px;
+  margin: -10px;
+}
+.all-body-cover {
+  margin-top: 200px;
+}
+.opening {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+}
+.nama {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+.img-thumbnail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.waves {
+  margin-top: -100px;
+  margin-bottom: 70px;
+}
+.firstContainer {
+  background: linear-gradient(
+    #ffffff 0%,
+    #ffffff 50%,
+    #ffffffde 70%,
+    #ffffffb6 75%,
+    #ffffff7e 80%,
+    #ffffff49 85%,
+    #ffffff1f 90%,
+    #ffffff00 100%
+  );
+  margin-top: -80px;
+  margin-bottom: 50px;
+}
+
+.content {
+  padding-bottom: 400px;
+}
+.nameHeading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.subNameHeading {
+  display: none;
+}
+.content .row {
+  padding-bottom: 40px;
+}
+.education {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.itemEdu {
+  padding: 10px;
+}
+.startEnd {
+  margin-bottom: -1px;
+}
+.achive {
+  margin-top: -200px;
+  margin-bottom: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wavesss {
+  margin-bottom: -20px;
+}
+.thirdContainer {
+  background-color: #fff;
+  margin-top: 20px;
+}
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+.article-container-firstRow {
+  width: 1100px;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  text-align: center;
+  box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.589);
+  border-radius: 10px;
+}
+.article-container-secondRow {
+  width: 340px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  text-align: center;
+}
+.article-container-thirdRow {
+  width: 530px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  font-family: "Sofia Sans Semi Condensed", sans-serif;
+  text-align: center;
+}
+
+.categoryy .container .col {
+  margin-bottom: 20px;
+}
+.article-img-holder-firstRow {
+  width: 100%;
+  height: 100%;
+  background: url("../img/porto1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+.article-img-holder-secondRow {
+  width: 100%;
+  height: 100%;
+  transition: all 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 35px;
+
+}
+
+.article-img-holder-thirdRow {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+}
+
+.article-img-holder-firstRow:hover {
+  transform: scale(1.2);
+  filter: saturate(0%);
+}
+.article-img-holder-secondRow:hover {
+  transform: scale(1.2);
+  filter: saturate(0%);
+}
+.article-img-holder-thirdRow:hover {
+  transform: scale(1.2);
+  filter: saturate(0%);
+}
+.fourthContainer {
+  margin-top: 200px;
+}
+.fivethContainer {
+  margin-top: -150px;
+  background-color: #fff;
+}
+.linkSosmed {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.itemSosmed {
+  padding: 10px;
+  color: black;
+  text-decoration: none;
+}
+.contactMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -90px;
+}
+
+
+
+@media screen and (max-width: 576px) {
+  .img-thumbnail {
+    width: 150px;
+  }
+  .nama h4 {
+    font-size: 20px;
+  }
+  .nama h5 {
+    font-size: 15px;
+  }
+  .toggleSlide {
+    transform: translateX(-85px);
+  }
+  .initial {
+    transform: translateX(-15px);
+  }
+  .buttonToggle {
+    display: inline;
+    margin-top: 8px;
+    padding: 0px 8px;
+  }
+  .nav-item-item {
+    display: none;
+  }
+  .offcanvas-body ul {
+    list-style-type: none;
+  }
+  .offcanvas-body a {
+    color: black;
+  }
+
+  .all-body-cover {
+    margin-top: 200px;
+  }
+  .firstContainer {
+    margin-top: -75px;
+  }
+.waves {
+    margin-top: 150px;
+    margin-bottom: 70px;
+  }
+  .wavesss {
+    margin-bottom: -25px;
+  }
+  .botWaves {
+    margin-top: -5px;
+  }
+  .wavesContact {
+    margin-bottom: -5px;
+  }
+  .subNameHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    padding-bottom: 0px;
+  }
+  .achive {
+    margin-top: -350px;
+    margin-bottom: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .article-container-firstRow {
+    width: 220px;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .article-container-secondRow {
+    width: 220px;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .article-container-thirdRow {
+    width: 220px;
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    font-family: "Sofia Sans Semi Condensed", sans-serif;
+    text-align: center;
+    margin: 0px auto;
+  }
+  .article-img-holder-firstRow {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+  .article-img-holder-secondRow {
+    width: 100%;
+    height: 100%;
+    transition: all 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  .article-img-holder-thirdRow {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.7s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+  }
+  .fourthContainer {
+    margin-top: 370px;
+    padding-bottom: 20px;
+  }
+
+  .fivethContainer {
+    margin-top: 0px;
+    padding-bottom: 20px;
+  }
+
+  .contactMe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+  }
+}
+
+  </style>
+
+  <body>
+    <ul class="nav justify-content-center bg-light fixed-top">
+      <li class="nav-item">
+        <!-- <a class="nav-link" href="#"> -->
+        <a
+          class="buttonToggle"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasWithBothOptions"
+          aria-controls="offcanvasWithBothOptions"
+          ><i class="fas fa-bars toggleSlide"></i
+        ></a>
+
+        <div
+          class="offcanvas offcanvas-start"
+          data-bs-scroll="true"
+          tabindex="-1"
+          id="offcanvasWithBothOptions"
+          aria-labelledby="offcanvasWithBothOptionsLabel"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+              Please select a menu :
+            </h5>
+            <button
+              type="button"
+              class="btn-close text-reset"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul>
+              <li>
+                <a class="nav-link" href="#Biodata">Biodata</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#Achievements">Achievements</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- </a> -->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link initial" href="#" aria-current="page">Ruur</a>
+      </li>
+
+      <li class="nav-item-item">
+        <a class="nav-link" href="#Biodata">Biodata</a>
+      </li>
+      <li class="nav-item-item">
+        <a class="nav-link" href="#Achievements">Mind Map</a>
+      </li>
+      <li class="nav-item-item">
+        <a class="nav-link" href="#Contact">Contact</a>
+      </li>
+    </ul>
+    <div class="all-body-cover">
+    <img
+    width="200px"
+    src="aset/pp.jpg.jpeg"
+    class="img-thumbnail rounded-circle mx-auto d-block"
+    alt="Profile Picture">
+
+      />
+      <div class="nama">
+        <h4 class="text-center fw-bold">Esa Nirza Zakya Putri</h4>
+        <h5 class="text-center">G1A022036</h5>
+      </div>
+
+      <svg
+        class="waves"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,160L48,149.3C96,139,192,117,288,144C384,171,480,245,576,272C672,299,768,277,864,250.7C960,224,1056,192,1152,186.7C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+        ></path>
+      </svg>
+      <div class="firstContainer">
+        <div class="content">
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="800"
+            id="Biodata"
+            class="nameHeading fw-bold"
+          >
+
+
+            BIODATA
+          </h2>
+          <div class="container text-center">
+            <div class="row">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                class="col-sm-4 mb-2"
+              >
+                Hai perkenalkan nama saya Esa Nirza Zakya Putri biasa dipanggil Esa saya 
+                seorang mahasiswa di Universitas Bengkulu Prodi Informatika Fakultas Teknik. Saya lahir di Malang pada tanggal 28 Mei 2004
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="800"
+                class="col-sm-4 mb-2"
+              >
+                <h4 class="subNameHeading fw-bold">EDUCATION</h4>
+                <div class="education">
+                  <!-- Button trigger modal -->
+                  <p class="startEnd">Started on Jul 2010</p>
+                  <button
+                    type="button"
+                    class="btn btn-danger itemEdu"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal1"
+                  >
+                    SDN 48 SELUMA
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal1"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                            Achievement
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">champion in the class</div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="startEnd">Finished on Jun 2016</p>
+                  <i class="fas fa-arrow-circle-down itemEdu"></i>
+                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
+                  <p class="startEnd">Started on Jul 2016</p>
+                  <button
+                    type="button"
+                    class="btn btn-danger itemEdu"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal2"
+                  >
+                    SMPN 05 SELUMA
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal2"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                            Achievement
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">Not Yet</div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="startEnd">Finished on Jun 2019</p>
+                  <i class="fas fa-arrow-circle-down itemEdu"></i>
+                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
+                  <p class="startEnd">Started on Jul 2019</p>
+                  <button
+                    type="button"
+                    class="btn btn-danger itemEdu"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal3"
+                  >
+                    SMAN 07 SELUMA
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal3"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                            Achievement
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body"> champion in the class
+                        </div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          > 
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="startEnd">Finished on Jun 2022</p>
+                  <i class="fas fa-arrow-circle-down itemEdu"></i>
+                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
+                  <p class="startEnd">Started on</p>
+                  <button
+                    type="button"
+                    class="btn btn-danger itemEdu"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModal4"
+                  >
+                    University (Coming Soon)
+                  </button>
+
+                  <!-- Modal -->
+                  <div
+                    class="modal fade"
+                    id="exampleModal4"
+                    tabindex="-1"
+                    aria-labelledby="exampleModalLabel"
+                    aria-hidden="true"
+                  >
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                            Achievement
+                          </h5>
+                          <button
+                            type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"
+                          ></button>
+                        </div>
+                        <div class="modal-body">Not yet</div>
+                        <div class="modal-footer">
+                          <button
+                            type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal"
+                          >
+                            Close
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div data-aos="fade-up" data-aos-duration="800" class="col-sm-4">
+                Hoby saya membaca nove, AU, Scroll Tiktok. Cita cita saya masuk Informatika yaitu
+                ingin menjadi web developer, atau mendesain UI/UX atau juga programming yang handal.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- second -->
+    <div class="secondContainer">
+      <h2
+        data-aos="fade-up"
+        data-aos-duration="800"
+        id="Achievements"
+        class="achive fw-bold"
+      >
+      MIND MAP
+      </h2>
+      <div class="container mx-auto">
+        <div class="row">
+          <div class="col-sm-3">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="800"
+              class="card text-dark mb-3 mx-auto"
+              style="max-width: 18rem"
+            >
+              <div class="card-header">Akademik</div>
+              <div class="card-body">
+                <p class="card-text">
+                    <ol>
+                      <li>Mendapatkan IP yang tinggi</li>
+                      <li>Menyelesaikan studi dengan predikat cumlaude.</li>
+                      <li>Aktif dalam kegiatan akademik seperti seminar, workshop, dan penelitian.</li>
+                  </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="800"
+              class="card text-dark mb-3 mx-auto"
+              style="max-width: 18rem"
+            >
+              <div class="card-header">Pengembangan Profesional:</div>
+              <div class="card-body">
+                <p class="card-text">
+                  <ol>
+                    <li>Mendapatkan magang atau kerja praktek di perusahaan terkemuka dalam 
+                      bidang studi.</li>
+                    <li>Memenangkan kompetisi atau hackathon yang relevan dengan jurusan.</li>
+                    <li>Mengembangkan portofolio yang kuat dalam hal proyek-proyek yang terkait dengan 
+                      bidang studi.</li>
+                </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="800"
+              class="card text-dark mb-3 mx-auto"
+              style="max-width: 18rem"
+            >
+              <div class="card-header">Pengembangan Diri:</div>
+              <div class="card-body">
+                <p class="card-text">
+                  <ol>
+                    <li>Menjadi pemimpin dalam organisasi mahasiswa atau kegiatan kampus.</li>
+                    <li>Mengikuti pelatihan kepemimpinan dan pengembangan diri.</li>
+                    <li>Meningkatkan keterampilan interpersonal dan komunikasi.</li>
+                </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="800"
+              class="card text-dark mb-3 mx-auto"
+              style="max-width: 18rem"
+            >
+              <div class="card-header">Kontribusi Sosial:</div>
+              <div class="card-body">
+                <p class="card-text">
+                  <ol>
+                    <li>Terlibat dalam kegiatan sosial dan kepedulian masyarakat.</li>
+                    <li>Menjadi relawan untuk proyek-proyek amal atau organisasi kemanusiaan.</li>
+                    <li>Mengadakan acara atau inisiatif yang bermanfaat bagi masyarakat sekitar kampus.</li>
+                </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fourthContainer">
+      <h2
+        data-aos="fade-up"
+        data-aos-duration="800"
+        id="Certifications"
+        class="achive text-center fw-bold"
+        >
+    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+    <svg
+      class="wavesContact"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 1440 320"
+    >
+      <path
+        fill="#ffffff"
+        fill-opacity="1"
+        d="M0,32L60,58.7C120,85,240,139,360,133.3C480,128,600,64,720,69.3C840,75,960,149,1080,154.7C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
+      ></path>
+    </svg>
+    <div class="fivethContainer">
+      <h2 id="Contact" class="contactMe fw-bold">CONTACT</h2>
+      <div class="container">
+        <div class="linkSosmed">
+          <a class="itemSosmed" href="https://www.instagram.com/esa_nirza?igsh=MWNtdHNrcTQ3dnhxeQ=="
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a class="itemSosmed" href="https://www.tiktok.com/@chfee05?_t=8k7xdh8o1wX&_r=1"
+            ><i class="fab fa-tiktok"></i
+          ></a>
+          <a class="itemSosmed" href="https://youtube.com/@esanirzazakyaputri5284?si=lBJXwxJ6kyTmk53N"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a class="itemSosmed" href="https://github.com/EsaNirzaZakyaPutri"
+            ><i class="fab fa-github"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
